@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 220 100% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 310 100% 85%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 220 100% 55%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 1rem;
+    
+    /* DaliCollab colors */
+    --dali-pink: 330 81% 60%;
+    --dali-blue: 220 100% 55%;
+    --dali-sand: 45 29% 97%;
+    --dali-gray: 220 9% 46%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 220 100% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 310 100% 85%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 220 100% 55%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .dali-pink {
+    @apply text-pink-500;
+    color: hsl(var(--dali-pink));
+  }
+  
+  .bg-dali-pink {
+    background-color: hsl(var(--dali-pink));
+  }
+  
+  .dali-blue {
+    @apply text-blue-500;
+    color: hsl(var(--dali-blue));
+  }
+  
+  .bg-dali-blue {
+    background-color: hsl(var(--dali-blue));
+  }
+  
+  .dali-sand {
+    color: hsl(var(--dali-sand));
+  }
+  
+  .bg-dali-sand {
+    background-color: hsl(var(--dali-sand));
+  }
+  
+  .dali-gray {
+    color: hsl(var(--dali-gray));
+  }
+  
+  .bg-dali-gray {
+    background-color: hsl(var(--dali-gray));
+  }
+  
+  .book-cover {
+    box-shadow: 
+      2px 2px 8px rgba(0,0,0,0.3),
+      inset -1px 0 2px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+  }
+  
+  .book-cover:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      4px 4px 12px rgba(0,0,0,0.4),
+      inset -1px 0 2px rgba(0,0,0,0.2);
+  }
+  
+  /* Decorative item styles */
+  .shelf-decoration {
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+    transition: all 0.2s ease;
+  }
+  
+  .shelf-decoration:hover {
+    transform: translateY(-1px);
+    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
+  }
+}
